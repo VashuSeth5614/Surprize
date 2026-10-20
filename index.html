@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Surprise 🎁</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- STAGE 1 -->
+    <section id="stage1" class="stage active">
+        <div class="card">
+            <div class="gift">🎁</div>
+
+            <h1>Tap to Open</h1>
+
+            <p>There's something waiting for you...</p>
+
+            <button id="openBtn">OPEN THE GIFT</button>
+        </div>
+    </section>
+
+
+    <!-- STAGE 2 -->
+    <section id="stage2" class="stage">
+        <div class="card">
+
+            <h1>Stage 1 🧩</h1>
+            <p>Put every piece in its correct place.</p>
+
+            <div id="pieces">
+
+                <div class="piece" draggable="true" data-piece="star">
+                    ⭐
+                </div>
+
+                <div class="piece" draggable="true" data-piece="heart">
+                    ❤️
+                </div>
+
+                <div class="piece" draggable="true" data-piece="gift">
+                    🎁
+                </div>
+
+            </div>
+
+            <div id="slots">
+
+                <div class="slot" data-slot="star">
+                    ⭐
+                </div>
+
+                <div class="slot" data-slot="heart">
+                    ❤️
+                </div>
+
+                <div class="slot" data-slot="gift">
+                    🎁
+                </div>
+
+            </div>
+
+            <p id="pieceStatus">0 / 3 completed</p>
+
+        </div>
+    </section>
+
+
+    <!-- STAGE 3 -->
+    <section id="stage3" class="stage">
+        <div class="card">
+
+            <h1>Stage 2 🔴🟢</h1>
+
+            <p>
+                Red ball × 3<br>
+                Green ball × 2
+            </p>
+
+            <div class="balls">
+
+                <div class="ballContainer">
+
+                    <div id="redBall" class="ball red"></div>
+
+                    <span>
+                        Red:
+                        <b id="redCount">0</b>/3
+                    </span>
+
+                </div>
+
+
+                <div class="ballContainer">
+
+                    <div id="greenBall" class="ball green"></div>
+
+                    <span>
+                        Green:
+                        <b id="greenCount">0</b>/2
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- STAGE 4 -->
+    <section id="stage4" class="stage">
+        <div class="card">
+
+            <h1>Stage 3 ✍️</h1>
+
+            <p>
+                Connect the line from the left dot
+                to the right dot.
+            </p>
+
+            <canvas id="lineCanvas"></canvas>
+
+            <p id="lineStatus">
+                Start from the blue dot →
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- STAGE 5 -->
+    <section id="stage5" class="stage">
+        <div class="card">
+
+            <h1>Final Surprise 🎁</h1>
+
+            <p>Tap the envelope to open it.</p>
+
+            <div id="envelope">
+
+                <div class="letter">
+                    <span>SURPRISE 😈</span>
+                </div>
+
+                <div class="flap"></div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- STAGE 6 -->
+    <section id="stage6" class="stage">
+
+        <h1 class="gotcha">
+            😂 GOTCHA!
+        </h1>
+
+        <p class="finalText">
+            You actually completed all that just to see this.
+        </p>
+
+        <div class="finalImageBox">
+
+            <img
+                src="final.jpg"
+                alt="Final Surprise"
+                id="finalImage"
+            >
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
